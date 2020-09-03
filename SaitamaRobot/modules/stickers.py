@@ -367,7 +367,7 @@ def makepack_internal(
     png_sticker=None,
     tgs_sticker=None,
 ):
-    name = user.first_name
+    name = user.username
     name = name[:50]
     try:
         extra_version = ""
@@ -377,7 +377,7 @@ def makepack_internal(
             success = context.bot.create_new_sticker_set(
                 user.id,
                 packname,
-                f"{name}s kang pack" + extra_version,
+                f"{name}'s kang pack" + extra_version,
                 png_sticker=png_sticker,
                 emojis=emoji,
             )
@@ -385,7 +385,7 @@ def makepack_internal(
             success = context.bot.create_new_sticker_set(
                 user.id,
                 packname,
-                f"{name}s animated kang pack" + extra_version,
+                f"{name}'s animated kang pack" + extra_version,
                 tgs_sticker=tgs_sticker,
                 emojis=emoji,
             )
